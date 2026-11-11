@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maison Aurelia – Luxury Furniture</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6ef;--card:#fff;--ink:#2b2620;--mut:#7a6f60;--gold:#b8924a;--line:#eadfcb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#faf6ef;--card:#fff;--ink:#2b2620;--mut:#7a6f60}}
+:root[data-theme="dark"]{--bg:#faf6ef;--card:#fff;--ink:#2b2620;--mut:#7a6f60}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;margin:0}
+header{position:sticky;top:0;z-index:9;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;background:rgba(250,246,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-size:26px;color:var(--gold);letter-spacing:1px}
+nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+nav a{color:var(--ink);text-decoration:none;font-size:14px}
+.call{background:var(--gold);color:#fff!important;padding:8px 14px;border-radius:30px}
+.cartbtn{cursor:pointer}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center;padding:50px 5vw;min-height:80vh;background:radial-gradient(circle at 80% 30%,#f3e6cc,transparent 60%)}
+.hero h1{font-size:clamp(38px,6vw,72px);line-height:1.05}
+.hero p{color:var(--mut);max-width:460px;line-height:1.6}
+.btn{display:inline-block;background:var(--ink);color:#fff;border:0;padding:13px 26px;border-radius:30px;cursor:pointer;text-decoration:none;font-size:14px}
+.btn.g{background:var(--gold)}
+.stage{perspective:900px;height:340px;display:grid;place-items:center}
+.sofa{position:relative;width:240px;height:110px;transform-style:preserve-3d;animation:spin 14s linear infinite}
+@keyframes spin{from{transform:rotateX(-18deg) rotateY(0)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+.f{position:absolute;border-radius:10px}
+.f.b{width:240px;height:70px;background:#d9c19a;transform:translateZ(-45px) translateY(-30px)}
+.f.fr{width:240px;height:70px;background:#c9ae82;transform:translateZ(45px) translateY(30px)}
+.f.l{width:90px;height:100px;background:#bfa070;left:-20px;top:-10px;transform:rotateY(-90deg) translateZ(0)}
+.f.r{width:90px;height:100px;background:#bfa070;right:-20px;top:-10px;transform:rotateY(90deg)}
+.f.s{width:240px;height:90px;background:#e8d5b3;transform:rotateX(90deg) translateZ(-10px)}
+.f.cl{width:96px;height:90px;background:#e8d5b3;transform:rotateX(90deg) translateZ(-10px)}
+.sec{padding:60px 5vw}
+.sec h2{font-size:40px;text-align:center}.sub{text-align:center;color:var(--mut);margin:8px 0 28px}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.tabs button{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:30px;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--gold);color:#fff;border-color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;perspective:1000px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;transition:transform .15s,box-shadow .3s;transform-style:preserve-3d;box-shadow:0 8px 24px rgba(120,90,40,.08)}
+.card:hover{box-shadow:0 24px 40px rgba(120,90,40,.18)}
+.pic{height:180px;border-radius:12px;background:linear-gradient(135deg,#f6ecd8,#efe0c2);display:grid;place-items:center;transform:translateZ(30px);animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateZ(30px) translateY(-6px)}}
+.card h3{font-size:22px;margin:12px 0 2px}.card small{color:var(--mut)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.price{font-weight:600;color:var(--gold);font-size:18px}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;text-align:center}
+.about div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+footer{background:#2b2620;color:#eadfcb;padding:40px 5vw;text-align:center}
+footer a{color:var(--gold);font-size:22px;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:40px 5vw;display:grid;grid-template-columns:1fr 1.2fr;gap:24px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.it{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;align-items:center}
+.q button{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer}
+.pay{display:flex;gap:10px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px;margin:8px 0;cursor:pointer}
+.pay.on{border-color:var(--gold);background:#fbf3e2}
+.ic{width:36px;height:36px;border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:13px}
+input{width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin:6px 0;font:inherit}
+.hid{display:none}.ok{text-align:center;padding:40px}
+@media(max-width:800px){.hero,.wrap{grid-template-columns:1fr}}
+</style></head><body>
+<header><div class="logo">Maison Aurelia</div>
+<nav><a href="#shop">Shop</a><a href="#about">Why us</a><a class="call" href="tel:+917439844855">📞 +91 74398 44855</a><a class="cartbtn" href="#checkout">🛒 Cart (<span id="cc">0</span>)</a></nav></header>
+
+<main id="home">
+<section class="hero"><div><h1>Furniture crafted for graceful living</h1>
+<p>Handcrafted sofas, beds, dining sets and décor in warm, light luxury finishes. Delivered and assembled across India.</p>
+<p><a class="btn g" href="#shop">Shop collection</a> &nbsp; <a class="btn" href="tel:+917439844855">Call us</a> &nbsp; <a class="btn" href="https://wa.me/917439844855" target="_blank" rel="noopener">WhatsApp</a></p></div>
+<div class="stage"><div class="sofa"><div class="f b"></div><div class="f fr"></div><div class="f l"></div><div class="f r"></div><div class="f s"></div></div></div></section>
+
+<section class="sec" id="shop"><h2>The Collection</h2><p class="sub">Tap a piece to add it to your cart</p>
+<div class="tabs" id="tabs"></div><div class="grid" id="grid"></div></section>
+
+<section class="sec" id="about"><h2>Why Maison Aurelia</h2><p class="sub">&nbsp;</p>
+<div class="about"><div><h3>Premium Materials</h3><p>Solid teak, Italian leather and velvet.</p></div><div><h3>Free Delivery</h3><p>Free white-glove delivery &amp; assembly.</p></div><div><h3>5-Year Warranty</h3><p>On frames and joinery.</p></div><div><h3>Secure Payments</h3><p>UPI, cards, net banking &amp; COD.</p></div></div></section>
+<footer><div class="logo">Maison Aurelia</div><p>Order or enquire anytime</p><a href="tel:+917439844855">+91 74398 44855</a><p style="font-size:12px;opacity:.7">© 2026 Maison Aurelia</p></footer>
+</main>
+
+<main id="checkout" class="hid"><div class="wrap">
+<div class="box"><h2>Your Cart</h2><div id="items"></div><div class="it"><b>Total</b><b id="tot">₹0</b></div><p><a href="#shop">← Continue shopping</a></p></div>
+<div class="box" id="payBox"><h2>Choose payment</h2>
+<div id="methods"></div>
+<div id="detail"></div>
+<input id="nm" placeholder="Full name"><input id="ph" placeholder="Phone number"><input id="ad" placeholder="Delivery address">
+<button class="btn g" style="width:100%;margin-top:8px" id="go">Pay now</button></div></div></main>
+
+<script>
+var UPI_ID="yourname@upi"; /* replace with your real UPI ID */
+var P=[["Sofa","Velvet Cloud 3‑Seater Sofa",64999,"sofa"],["Sofa","Chesterfield Leather Sofa",89999,"sofa"],["Bed","Royal King Size Bed",74999,"bed"],["Bed","Cushioned Queen Bed",52999,"bed"],["Dining","Marble 6‑Seater Dining Set",84999,"table"],["Chair","Accent Armchair",18999,"chair"],["Living","Walnut Coffee Table",14999,"table"],["Storage","Mirrored Wardrobe",59999,"wardrobe"],["Storage","Display Bookshelf",21999,"shelf"],["Décor","Gold Floor Lamp",9999,"lamp"]];
+var cart=[],cat="All",pm="gpay";
+var C={sofa:"#c9ae82",bed:"#d9c19a",table:"#b8924a",chair:"#a8844f",wardrobe:"#c7a97a",shelf:"#b99a68",lamp:"#d4af37"};
+function art(t){var c=C[t]||"#c9ae82",s='<svg width="190" height="150" viewBox="0 0 190 150"><ellipse cx="95" cy="136" rx="80" ry="8" fill="#0001"/>';
+if(t=="sofa")s+='<rect x="25" y="50" width="140" height="48" rx="14" fill="'+c+'"/><rect x="12" y="62" width="30" height="50" rx="12" fill="#b99a68"/><rect x="148" y="62" width="30" height="50" rx="12" fill="#b99a68"/><rect x="40" y="76" width="55" height="30" rx="8" fill="#e8d5b3"/><rect x="95" y="76" width="55" height="30" rx="8" fill="#e8d5b3"/>';
+else if(t=="bed")s+='<rect x="20" y="30" width="150" height="55" rx="10" fill="#a8844f"/><rect x="15" y="80" width="160" height="38" rx="8" fill="#f1e6d0"/><rect x="28" y="66" width="50" height="18" rx="8" fill="#fff"/><rect x="108" y="66" width="50" height="18" rx="8" fill="#fff"/><rect x="15" y="100" width="160" height="18" fill="'+c+'"/>';
+else if(t=="table")s+='<rect x="25" y="55" width="140" height="14" rx="5" fill="'+c+'"/><rect x="40" y="69" width="10" height="55" fill="#8a6a35"/><rect x="140" y="69" width="10" height="55" fill="#8a6a35"/>';
+else if(t=="chair")s+='<rect x="55" y="25" width="80" height="60" rx="18" fill="'+c+'"/><rect x="45" y="80" width="100" height="26" rx="10" fill="#e8d5b3"/><rect x="55" y="104" width="8" height="26" fill="#8a6a35"/><rect x="127" y="104" width="8" height="26" fill="#8a6a35"/>';
+else if(t=="wardrobe")s+='<rect x="40" y="10" width="110" height="115" rx="6" fill="'+c+'"/><rect x="48" y="18" width="45" height="99" fill="#eaf1f2"/><rect x="97" y="18" width="45" height="99" fill="#eaf1f2"/><circle cx="90" cy="70" r="3" fill="#8a6a35"/><circle cx="100" cy="70" r="3" fill="#8a6a35"/>';
+else if(t=="shelf")s+='<rect x="45" y="10" width="100" height="115" rx="4" fill="'+c+'"/><rect x="52" y="18" width="86" height="26" fill="#f6ecd8"/><rect x="52" y="50" width="86" height="26" fill="#f6ecd8"/><rect x="52" y="82" width="86" height="35" fill="#f6ecd8"/><rect x="60" y="24" width="10" height="20" fill="#b8924a"/><rect x="75" y="56" width="14" height="20" fill="#8a6a35"/>';
+else s+='<path d="M70 20 L120 20 L132 60 L58 60 Z" fill="#f6e3a5"/><rect x="92" y="60" width="6" height="62" fill="'+c+'"/><ellipse cx="95" cy="124" rx="26" ry="6" fill="'+c+'"/>';
+return s+'</svg>'}
+function fmt(n){return"₹"+n.toLocaleString("en-IN")}
+function shop(){var cs=["All"].concat(P.map(p=>p[0]).filter((v,i,a)=>a.indexOf(v)==i));
+tabs.innerHTML=cs.map(c=>'<button class="'+(c==cat?"on":"")+'" onclick="cat=\''+c+'\';shop()">'+c+'</button>').join("");
+grid.innerHTML=P.map((p,i)=>p[0]==cat||cat=="All"?'<div class="card"><div class="pic">'+art(p[3])+'</div><h3>'+p[1]+'</h3><small>'+p[0]+' · Free delivery</small><div class="row"><span class="price">'+fmt(p[2])+'</span><button class="btn" onclick="add('+i+')">Add to cart</button></div></div>':"").join("");
+document.querySelectorAll(".card").forEach(function(c){c.onmousemove=function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="rotateY("+x*14+"deg) rotateX("+-y*14+"deg)"};c.onmouseleave=function(){c.style.transform=""}})}
+function add(i){var f=cart.find(x=>x.i==i);f?f.q++:cart.push({i:i,q:1});save();location.hash="checkout"}
+function save(){cc.textContent=cart.reduce((a,b)=>a+b.q,0);try{localStorage.setItem("cart",JSON.stringify(cart))}catch(e){}}
+function chg(i,d){var f=cart.find(x=>x.i==i);f.q+=d;if(f.q<1)cart=cart.filter(x=>x.i!=i);save();rend()}
+function total(){return cart.reduce((a,b)=>a+P[b.i][2]*b.q,0)}
+var M=[["gpay","Google Pay","G","#4285f4"],["phonepe","PhonePe","Pe","#5f259f"],["paytm","Paytm","Pt","#00baf2"],["upi","Any UPI ID","UPI","#0d8a4f"],["card","Credit / Debit Card","💳","#555"],["nb","Net Banking","🏦","#b8924a"],["cod","Cash on Delivery","₹","#2b2620"]];
+function rend(){items.innerHTML=cart.length?cart.map(c=>'<div class="it"><span>'+P[c[Object.keys(c)[0]]][1]+'</span><span class="q"><button onclick="chg('+c.i+',-1)">−</button> '+c.q+' <button onclick="chg('+c.i+',1)">+</button></span><b>'+fmt(P[c.i][2]*c.q)+'</b></div>').join(""):"<p>Your cart is empty.</p>";
+tot.textContent=fmt(total());
+methods.innerHTML=M.map(m=>'<div class="pay '+(m[0]==pm?"on":"")+'" onclick="pm=\''+m[0]+'\';rend()"><div class="ic" style="background:'+m[3]+'">'+m[2]+'</div>'+m[1]+'</div>').join("");
+detail.innerHTML=pm=="upi"?'<input id="uid" placeholder="yourname@bank">':pm=="card"?'<input placeholder="Card number"><input placeholder="MM/YY &nbsp; CVV">':pm=="nb"?'<input placeholder="Bank name">':pm=="cod"?'<p>Pay in cash when your order arrives.</p>':'<p>You will be taken to your '+M.find(m=>m[0]==pm)[1]+' app to approve ₹'+total().toLocaleString("en-IN")+'.</p>'}
+go.onclick=function(){if(!cart.length)return alert("Your cart is empty");if(!nm.value||!ph.value||!ad.value)return alert("Please fill name, phone and address");
+var t=total();if(["gpay","phonepe","paytm","upi"].indexOf(pm)>-1){var u="upi://pay?pa="+UPI_ID+"&pn=Maison%20Aurelia&am="+t+"&cu=INR&tn=Furniture%20order";
+if(pm=="gpay")u=u.replace("upi://","tez://upi/");if(pm=="phonepe")u=u.replace("upi://","phonepe://");location.href=u}
+payBox.innerHTML='<div class="ok"><h2>Thank you, '+nm.value+'!</h2><p>Your order of '+fmt(t)+' is received ('+M.find(m=>m[0]==pm)[1]+').<br>We will call you on '+ph.value+' to confirm delivery.</p><a class="btn g" href="tel:+917439844855">Call +91 74398 44855</a></div>';cart=[];save()};
+function route(){var c=location.hash=="#checkout";home.classList.toggle("hid",c);checkout.classList.toggle("hid",!c);if(c){rend();scrollTo(0,0)}}
+try{cart=JSON.parse(localStorage.getItem("cart")||"[]")}catch(e){cart=[]}
+addEventListener("hashchange",route);shop();save();route();
+</script></body></html>
